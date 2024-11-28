@@ -3,12 +3,12 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-from todo.config import settings
+from ToDo.config import settings
 
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__name__)) #константа с путем до папки database
-db_path = os.path.join(BASE_DIR, 'todo', 'database', 'DB') #Путь до папки DB в которой будет создаваться база данных
+db_path = os.path.join(BASE_DIR, 'ToDo', 'database', 'DB') #Путь до папки DB в которой будет создаваться база данных
 if not os.path.exists(db_path):  #Если вышестоящего пути нет мы создаем этот путь
     os.makedirs(db_path)
 
